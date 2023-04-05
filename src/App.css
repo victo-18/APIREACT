@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+.card{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  width: 25rem;
+  height: 50rem;
+}

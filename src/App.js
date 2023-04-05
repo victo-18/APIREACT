@@ -1,20 +1,24 @@
 //import logo from './logo.svg';
-import { React } from "react";
+import { React, useEffect ,useState} from "react";
 import "./App.css";
+import { Panel } from "./component/Panel";
 import { useFetch } from "./component/useFetch";
+import axios from "axios";
 function App() {
-  const { data } = useFetch("https://rickandmortyapi.com/api/character");
-  console.log(data);
-  return (
-    <div className="card">
-      {/* <ul>
-        {data?.map((user) => (
-          // <li {key={user.id}>{user.name}}<li>
-          <li key={user.id}>{user.name}</li>
-        ))}
-      </ul> */}
-    </div>
-  );
+  const [data, setData] = useState(null);
+  useEffect(() => {
+    const apiFetch = async () => {
+      const { status, data } = await axios.get(
+        "https://rickandmortyapi.com/api/character"
+      );
+      if (status === 200) {
+        setData(data.results);
+      }
+    };
+    if(data==null)
+    apiFetch();
+  });
+  return <>{data && data.map((pj) => <Panel personaje={pj} />)}</>;
 }
 
 export default App;
