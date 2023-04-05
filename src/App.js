@@ -1,32 +1,18 @@
 //import logo from './logo.svg';
-import React,{ useEffect, useState } from 'react';
-import './App.css';
-
+import { React } from "react";
+import "./App.css";
+import { useFetch } from "./component/useFetch";
 function App() {
-  
-  const url=('https://rickandmortyapi.com/',
-{
-  method: 'GET',
-  headers:'riki',
-  mode: 'cors', // <---
-  cache: 'default'
-}
-  )
-  const[todos,setTodos]=useState()
-  const fetchApi= async ()=>{
-    const respuesta = await fetch(url)
-    console.log(respuesta.status)
-    const responJSON = await respuesta.json();
-    setTodos(responJSON);
-    console.log(responJSON)
-  }
-  useEffect(()=>{
-    fetchApi()
-  },[])
+  const { data } = useFetch("https://rickandmortyapi.com/api/character");
+  console.log(data);
   return (
-    <div className="App">
-      
-    funcionando...
+    <div className="card">
+      {/* <ul>
+        {data?.map((user) => (
+          // <li {key={user.id}>{user.name}}<li>
+          <li key={user.id}>{user.name}</li>
+        ))}
+      </ul> */}
     </div>
   );
 }
