@@ -1,8 +1,6 @@
-//import logo from './logo.svg';
 import { React, useEffect ,useState} from "react";
 import "./App.css";
 import { Panel } from "./component/Panel";
-import { useFetch } from "./component/useFetch";
 import axios from "axios";
 function App() {
   const [data, setData] = useState(null);
