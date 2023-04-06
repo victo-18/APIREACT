@@ -1,6 +1,7 @@
 import { React, useEffect ,useState} from "react";
 import { Panel } from "./component/Panel";
 import axios from "axios";
+import './App.css'
 function App() {
   const [data, setData] = useState(null);
   useEffect(() => {
