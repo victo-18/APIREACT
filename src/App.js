@@ -1,5 +1,4 @@
 import { React, useEffect ,useState} from "react";
-import "./App.css";
 import { Panel } from "./component/Panel";
 import axios from "axios";
 function App() {
