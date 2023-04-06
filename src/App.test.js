@@ -1,8 +1,9 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen,renderer } from '@testing-library/react';
 import App from './App';
+import { React, useEffect ,useState} from "react";
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test('visualizacion componentes', () => {
+  render(<App/>);
+  const componente =renderer.create(<App/>).toJSON()
+  expect(componente).toMatchSnapshot();
 });
