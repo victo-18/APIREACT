@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/victo-18/APIREACT.git/static/css/main.8bb385a9.css",
+    "main.js": "/victo-18/APIREACT.git/static/js/main.e12a3fde.js",
+    "static/js/787.178672dc.chunk.js": "/victo-18/APIREACT.git/static/js/787.178672dc.chunk.js",
+    "index.html": "/victo-18/APIREACT.git/index.html",
+    "main.8bb385a9.css.map": "/victo-18/APIREACT.git/static/css/main.8bb385a9.css.map",
+    "main.e12a3fde.js.map": "/victo-18/APIREACT.git/static/js/main.e12a3fde.js.map",
+    "787.178672dc.chunk.js.map": "/victo-18/APIREACT.git/static/js/787.178672dc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8bb385a9.css",
+    "static/js/main.e12a3fde.js"
+  ]
+}
